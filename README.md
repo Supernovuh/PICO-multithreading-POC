@@ -1,15 +1,16 @@
 # Pico-start-code
-Simple code to use both cores on the raspberry pi pico in order to visually notify user when the setup code is done/when main starts
-
-unfinished
+Code to notify user when specified 'setup' code has completed by blinking the onboard LED while the code is running and setting it as solid when the main function starts
 
 
-How to use (when done)
+proof of concept - this solves a basically nonexistent issue - proves the use of two threads on a raspberry pi pico
 
 
-add a function where specified, this will be starting code. The onboard LED (pin 25 unless otherwise specified) will blink while the code sets up. When the LED is done blinking the code is set up. 
+How to use
 
-WORK IN PROGRESS
+1 - Specify what pin the LED is on - line 13
 
+2 - Set function to run when the PICO gets power - lines 25-26
 
-done, next comes documentation
+3 - Set code to run while setup function is running - 41-42 (dont edit to leave the LED blinking)
+
+4 - Enter main code - line 48
